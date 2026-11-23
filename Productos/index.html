@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos Lácteos & Derivados Artesanales | Ganadería de Élite</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Estilos Globales y Tienda -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/tienda.css">
+
+  <link rel="icon" href="../Imagenes/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR MÓVIL (Visible < 992px) -->
+  <header class="mobile-topbar">
+    <div class="mobile-brand">
+      <img src="../Imagenes/logo.png" alt="Logo Ganadería Élite">
+      <span class="title">Ganadería Élite</span>
+    </div>
+    <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- OVERLAY MÓVIL -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- MENÚ LATERAL (SIDEBAR) -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="logo-text">
+        <h2>Élite</h2>
+        <span>Hacienda & Genética</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-menu">
+      <span class="menu-label">Navegación Principal</span>
+      
+      <a href="../index.html">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="../catalogos/index.html">
+        <i class="fas fa-layer-group"></i>
+        <span>Catálogo de Razas</span>
+      </a>
+
+      <a href="index.html" class="active">
+        <i class="fas fa-cheese"></i>
+        <span>Productos & Lácteos</span>
+      </a>
+
+      <a href="../carrito/index.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Carrito de Compras</span>
+        <span class="cart-badge" style="display: none;">0</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>Hacienda Operativa</span>
+      </div>
+      <p>© 2025 Ganadería Élite S.A.</p>
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <div class="container">
+      
+      <header class="shop-header">
+        <span class="section-tag">Directo de la Hacienda a tu Mesa</span>
+        <h1>Nuestros Productos Premium</h1>
+        <p>Quesos madurados de autor, derivados lácteos puros y manjares tradicionales elaborados con leche fresca de vacas criadas en pastoreo regenerativo.</p>
+      </header>
+
+      <!-- CONTROLES: BUSCADOR & CATEGORÍAS -->
+      <section class="shop-controls">
+        <div class="search-box-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchProducts" class="search-input" placeholder="Buscar queso, manjar blanco, yogur o mantequilla...">
+        </div>
+
+        <div class="product-categories-tabs">
+          <button class="prod-tab active" data-category="all">
+            <i class="fas fa-border-all"></i> Todos los Productos (14)
+          </button>
+          <button class="prod-tab" data-category="quesos">
+            <i class="fas fa-cheese"></i> Quesos Finos & Madurados (10)
+          </button>
+          <button class="prod-tab" data-category="dulces">
+            <i class="fas fa-jar"></i> Manjares & Dulces de Leche (2)
+          </button>
+          <button class="prod-tab" data-category="derivados">
+            <i class="fas fa-bottle-droplet"></i> Yogur & Mantequilla (2)
+          </button>
+        </div>
+      </section>
+
+      <!-- REJILLA DE PRODUCTOS -->
+      <section class="products-grid" id="productsGrid">
+
+        <!-- PRODUCTO 1: MOZZARELLA -->
+        <article class="product-card" data-category="quesos" data-price="25.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Fresco & Hilado</span>
+            <img src="imagenes-productos/queso-mosarela.png" alt="Queso Mozzarella Artesanal">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 25.00</span>
+              <span class="spec-tag">500g</span>
+            </div>
+            <h3 class="product-title">Mozzarella Artesanal</h3>
+            <p class="product-desc">Tradicional queso de pasta hilada suave, elástico y cremoso. Ideal para ensaladas caprese, pizzas y pastas.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 2: CHEDDAR -->
+        <article class="product-card" data-category="quesos" data-price="119.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Madurado 12 Meses</span>
+            <img src="imagenes-productos/cheddar.png" alt="Queso Cheddar Vintage">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 119.00</span>
+              <span class="spec-tag">1 kg</span>
+            </div>
+            <h3 class="product-title">Cheddar Reserva</h3>
+            <p class="product-desc">Originario de Inglaterra, de pasta dura firme, color dorado natural y un toque picante complejo y profundo.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 3: EMMENTAL -->
+        <article class="product-card" data-category="quesos" data-price="115.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Tradición Suiza</span>
+            <img src="imagenes-productos/Emmental.png" alt="Queso Emmental">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 115.00</span>
+              <span class="spec-tag">1 kg</span>
+            </div>
+            <h3 class="product-title">Emmental Clásico</h3>
+            <p class="product-desc">Famoso queso suizo de ojos grandes característicos, aroma floral y un sabor suave con notas a nuez dulce.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 4: GOUDA -->
+        <article class="product-card" data-category="quesos" data-price="46.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Semiduro Holandés</span>
+            <img src="imagenes-productos/Gouda.png" alt="Queso Gouda">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 46.00</span>
+              <span class="spec-tag">500g</span>
+            </div>
+            <h3 class="product-title">Gouda de Granja</h3>
+            <p class="product-desc">Queso holandés semiduro de textura mantecosa y sabor suave y lácteo. Ideal para tablas y fundir.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 5: PARMESANO -->
+        <article class="product-card" data-category="quesos" data-price="37.76">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Maduración Lenta</span>
+            <img src="imagenes-productos/Parmesano.png" alt="Queso Parmesano">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 37.76</span>
+              <span class="spec-tag">300g</span>
+            </div>
+            <h3 class="product-title">Parmesano Gran Reserva</h3>
+            <p class="product-desc">Queso duro italiano curado lentamente. Textura granulada con cristales crujientes y sabor umami intenso.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 6: QUESO AZUL -->
+        <article class="product-card" data-category="quesos" data-price="26.25">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Vetas Azules</span>
+            <img src="imagenes-productos/Queso azul.png" alt="Queso Azul">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 26.25</span>
+              <span class="spec-tag">250g</span>
+            </div>
+            <h3 class="product-title">Queso Azul Selecto</h3>
+            <p class="product-desc">Con vetas de Penicillium roqueforti, textura semiblanda untuosa y sabor aromático, penetrante y picante.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 7: BRIE -->
+        <article class="product-card" data-category="quesos" data-price="47.96">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Corteza Comestible</span>
+            <img src="imagenes-productos/Brie.png" alt="Queso Brie">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 47.96</span>
+              <span class="spec-tag">350g</span>
+            </div>
+            <h3 class="product-title">Brie Francés</h3>
+            <p class="product-desc">Queso de pasta blanda suave y corteza aterciopelada blanca. Corazón ultra cremoso con notas a hongos frescos.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 8: ROQUEFORT -->
+        <article class="product-card" data-category="quesos" data-price="28.50">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Afinado en Cueva</span>
+            <img src="imagenes-productos/Roquefort.png" alt="Queso Roquefort">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 28.50</span>
+              <span class="spec-tag">200g</span>
+            </div>
+            <h3 class="product-title">Roquefort de Autor</h3>
+            <p class="product-desc">El rey de los quesos azules: salinidad noble, textura mantecosa y un postgusto largo y elegante.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 9: FETA -->
+        <article class="product-card" data-category="quesos" data-price="26.25">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">En Salmuera</span>
+            <img src="imagenes-productos/Feta.png" alt="Queso Feta">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 26.25</span>
+              <span class="spec-tag">300g</span>
+            </div>
+            <h3 class="product-title">Feta Griego</h3>
+            <p class="product-desc">Madurado en salmuera marina. Textura desmenuzable y sabor fresco y ligeramente ácido, perfecto para ensaladas.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 10: MASCARPONE -->
+        <article class="product-card" data-category="quesos" data-price="35.25">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Doble Crema</span>
+            <img src="imagenes-productos/Mascarpone.png" alt="Queso Mascarpone">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 35.25</span>
+              <span class="spec-tag">500g</span>
+            </div>
+            <h3 class="product-title">Mascarpone Italiano</h3>
+            <p class="product-desc">Ultra untuoso, elaborado a base de crema de leche fresca. Esencial para tiramisú, repostería fina y salsas.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 11: YOGUR NATURAL -->
+        <article class="product-card" data-category="derivados" data-price="12.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">100% Probiótico</span>
+            <img src="imagenes-productos/YOGUR-NATURAL.png" alt="Yogur Natural Artesanal">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 12.00</span>
+              <span class="spec-tag">1 Litro</span>
+            </div>
+            <h3 class="product-title">Yogur Natural de Campo</h3>
+            <p class="product-desc">Sin azúcares añadidos ni conservantes. Fermentación lenta con cultivos lácticos vivos para cuidar tu microbiota.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 12: MANTEQUILLA -->
+        <article class="product-card" data-category="derivados" data-price="8.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Batido Tradicional</span>
+            <img src="imagenes-productos/mantequilla.png" alt="Mantequilla Artesanal">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 8.00</span>
+              <span class="spec-tag">250g</span>
+            </div>
+            <h3 class="product-title">Mantequilla Pura de Pastura</h3>
+            <p class="product-desc">Batida a partir de nata fresca pasteurizada, ligeramente salada con sal de maras. Color y aroma dorado natural.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 13: MANJAR BLANCO -->
+        <article class="product-card" data-category="dulces" data-price="15.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Receta de Paila</span>
+            <img src="imagenes-productos/MANJAR-BLANCO.png" alt="Manjar Blanco Tradicional">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 15.00</span>
+              <span class="spec-tag">500g</span>
+            </div>
+            <h3 class="product-title">Manjar Blanco Tradicional</h3>
+            <p class="product-desc">Cocinado a fuego lento en paila de cobre con leche entera fresca y azúcar de caña. Textura tersa y sedosa.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 14: MANJAR DE LECHE -->
+        <article class="product-card" data-category="dulces" data-price="20.00">
+          <div class="product-img-wrap">
+            <span class="product-badge-pos">Edición Hacienda</span>
+            <img src="imagenes-productos/MANJAR DE LECHE.png" alt="Manjar de Leche Puro">
+          </div>
+          <div class="product-body">
+            <div class="product-price-row">
+              <span class="product-price">S/. 20.00</span>
+              <span class="spec-tag">850g</span>
+            </div>
+            <h3 class="product-title">Manjar de Leche de Campo</h3>
+            <p class="product-desc">Presentación familiar especial. Consistencia densa y acaramelada, perfecto para postres, alfajores y tostadas.</p>
+            <div class="product-actions">
+              <div class="qty-selector">
+                <button class="qty-btn qty-minus" aria-label="Disminuir"><i class="fas fa-minus"></i></button>
+                <input type="text" class="qty-input" value="1" readonly>
+                <button class="qty-btn qty-plus" aria-label="Aumentar"><i class="fas fa-plus"></i></button>
+              </div>
+              <button class="btn-add-cart">
+                <i class="fas fa-cart-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ESTADO VACÍO -->
+        <div id="noProducts" class="no-results" style="display: none;">
+          <i class="fas fa-basket-shopping"></i>
+          <h3>No encontramos productos con ese nombre</h3>
+          <p>Prueba con otra búsqueda o selecciona otra categoría de lácteos.</p>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>Ganadería <span>Élite</span></h3>
+            <p>Productos 100% naturales, elaborados con leche de vacas alimentadas a pasto libre de químicos y hormonas. Tradición quesera de calidad suprema.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Catálogo</h4>
+            <ul>
+              <li><a href="../catalogos/index.html">Razas de Carne</a></li>
+              <li><a href="../catalogos/index.html">Razas Lecheras</a></li>
+              <li><a href="../catalogos/index.html">Doble Propósito</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Mi Compra</h4>
+            <ul>
+              <li><a href="../carrito/index.html">Revisar Carrito</a></li>
+              <li><a href="../index.html">Volver al Inicio</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 <span>Ganadería Élite</span>. Del campo a tu mesa con orgullo nacional.</p>
+          <p>Envíos refrigerados y pedidos mayoristas garantizados.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../js/app.js"></script>
+  <script src="../js/tienda.js"></script>
+</body>
+</html>

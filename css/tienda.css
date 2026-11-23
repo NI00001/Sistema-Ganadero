@@ -1,0 +1,272 @@
+/* ==========================================================================
+   TIENDA DE PRODUCTOS Y DERIVADOS LÁCTEOS - ESTILOS
+   ========================================================================== */
+
+.shop-header {
+  padding: 60px 0 30px;
+  text-align: center;
+}
+
+.shop-header .section-tag {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.shop-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 16px;
+  color: var(--text-title);
+}
+
+.shop-header p {
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* CONTROLES DE LA TIENDA */
+.shop-controls {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin: 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.product-categories-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.prod-tab {
+  padding: 10px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  color: var(--text-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prod-tab:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-gold);
+  color: #FFFFFF;
+}
+
+.prod-tab.active {
+  background: linear-gradient(135deg, var(--gold) 0%, #B89728 100%);
+  color: #070A08;
+  border-color: var(--gold);
+  font-weight: 700;
+  box-shadow: var(--shadow-gold);
+}
+
+/* REJILLA DE PRODUCTOS */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-card-hover);
+}
+
+.product-img-wrap {
+  position: relative;
+  height: 220px;
+  background: radial-gradient(circle, rgba(45,106,79,0.15) 0%, rgba(7,10,9,0.6) 100%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-img-wrap img {
+  max-height: 180px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+.product-badge-pos {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(45, 106, 79, 0.4);
+  border: 1px solid var(--primary-hover);
+  color: #A7F3D0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.product-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* SELECTOR DE CANTIDADES */
+.qty-selector {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 2px 6px;
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-body);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.qty-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--gold);
+}
+
+.qty-input {
+  width: 32px;
+  background: transparent;
+  border: none;
+  color: var(--text-title);
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* BOTÓN AGREGAR */
+.btn-add-cart {
+  flex: 1;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--gold) 0%, #B89728 100%);
+  color: #070A08;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+.btn-add-cart:hover {
+  background: linear-gradient(135deg, var(--gold-hover) 0%, var(--gold) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+  color: #000;
+}
+
+.btn-add-cart.added {
+  background: var(--accent-green);
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .product-categories-tabs {
+    overflow-x: auto;
+    padding-bottom: 6px;
+    flex-wrap: nowrap;
+  }
+  .prod-tab {
+    white-space: nowrap;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Oficial de Razas Bovinas | Ganadería de Élite</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Estilos Globales y Catálogo -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/catalogo.css">
+
+  <link rel="icon" href="../Imagenes/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR MÓVIL (Visible < 992px) -->
+  <header class="mobile-topbar">
+    <div class="mobile-brand">
+      <img src="../Imagenes/logo.png" alt="Logo Ganadería Élite">
+      <span class="title">Ganadería Élite</span>
+    </div>
+    <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- OVERLAY MÓVIL -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- MENÚ LATERAL (SIDEBAR) -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="logo-text">
+        <h2>Élite</h2>
+        <span>Hacienda & Genética</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-menu">
+      <span class="menu-label">Navegación Principal</span>
+      
+      <a href="../index.html">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="index.html" class="active">
+        <i class="fas fa-layer-group"></i>
+        <span>Catálogo de Razas</span>
+      </a>
+
+      <a href="../Productos/index.html">
+        <i class="fas fa-cheese"></i>
+        <span>Productos & Lácteos</span>
+      </a>
+
+      <a href="../carrito/index.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Carrito de Compras</span>
+        <span class="cart-badge" style="display: none;">0</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>Hacienda Operativa</span>
+      </div>
+      <p>© 2025 Ganadería Élite S.A.</p>
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <div class="container">
+      
+      <header class="catalog-header">
+        <span class="section-tag">Banco Genético Bovino</span>
+        <h1>Catálogo de Razas Bovinas</h1>
+        <p>Explora nuestras 19 razas élite clasificadas por su aptitud productiva. Consulta sus características zootécnicas, procedencia, potencial productivo y adaptabilidad climática.</p>
+      </header>
+
+      <!-- BARRA DE CONTROLES: BUSCADOR & FILTROS -->
+      <section class="catalog-controls">
+        <div class="search-box-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchBreeds" class="search-input" placeholder="Buscar raza por nombre, país de origen o aptitud (ej: Angus, Brasil, Leche, Cebú)...">
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">
+            <i class="fas fa-border-all"></i> Todas las Razas <span class="tab-count">19</span>
+          </button>
+          <button class="filter-tab" data-filter="carne">
+            <i class="fas fa-drumstick-bite"></i> Razas de Carne <span class="tab-count">7</span>
+          </button>
+          <button class="filter-tab" data-filter="leche">
+            <i class="fas fa-glass-water"></i> Razas Lecheras <span class="tab-count">6</span>
+          </button>
+          <button class="filter-tab" data-filter="doble">
+            <i class="fas fa-scale-balanced"></i> Doble Propósito <span class="tab-count">6</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- REJILLA DE TARJETAS DE RAZAS -->
+      <section class="breeds-grid" id="breedsGrid">
+
+        <!-- 1. ANGUS (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Escocia">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Angus/Imagenes/toro-angus.png" alt="Toro Angus Negro">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Angus</h2>
+            <p class="breed-subtitle">La reina de la carne premium y marmoleo</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Escocia</span>
+              <span class="spec-tag"><i class="fas fa-dna"></i> Mocho natural</span>
+              <span class="spec-tag"><i class="fas fa-fire"></i> Alto marmoleo</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-star"></i> Certified Angus</span>
+              <a href="../Razas de carne/Angus/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. BRAHMAN (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Estados Unidos">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Brahman/Imagenes/toro-Brahman.webp" alt="Toro Brahman">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Brahman</h2>
+            <p class="breed-subtitle">El rey del trópico, rusticidad y vigor híbrido</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> EE.UU. (Cebú)</span>
+              <span class="spec-tag"><i class="fas fa-sun"></i> Clima cálido</span>
+              <span class="spec-tag"><i class="fas fa-shield"></i> Resistencia térmica</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-cow"></i> Base cebuina</span>
+              <a href="../Razas de carne/Brahman/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. BRANGUS (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Estados Unidos">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Brangus/Imagenes/toro-brangus.jpg" alt="Toro Brangus">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Brangus</h2>
+            <p class="breed-subtitle">5/8 Angus + 3/8 Brahman: calidad y adaptación</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> EE.UU.</span>
+              <span class="spec-tag"><i class="fas fa-seedling"></i> Sintética</span>
+              <span class="spec-tag"><i class="fas fa-weight-scale"></i> Alta ganancia</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-award"></i> Carne tierna</span>
+              <a href="../Razas de carne/Brangus/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. CHAROLAIS (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Francia">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Charolais/Imagenes/toro-charolais-blanco-musculoso.jpg" alt="Toro Charolais">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Charolais</h2>
+            <p class="breed-subtitle">El gigante blanco de máximo volumen muscular</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Francia</span>
+              <span class="spec-tag"><i class="fas fa-cubes"></i> Canal magra</span>
+              <span class="spec-tag"><i class="fas fa-arrows-up-down"></i> Gran tamaño</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-bolt"></i> Cruce terminal</span>
+              <a href="../Razas de carne/Charolais/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. HEREFORD (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Inglaterra">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Hereford/Imagenes/Hereford.png" alt="Toro Hereford">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Hereford</h2>
+            <p class="breed-subtitle">La emblemática cara blanca de docilidad suprema</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Inglaterra</span>
+              <span class="spec-tag"><i class="fas fa-heart"></i> Docilidad</span>
+              <span class="spec-tag"><i class="fas fa-grass"></i> Pastoreo eficiente</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-baby"></i> Gran instinto maternal</span>
+              <a href="../Razas de carne/Hereford/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. LIMOUSIN (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Francia">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Limousin/Imagenes/limusin-dorado.jpg" alt="Toro Limousin">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Limousin</h2>
+            <p class="breed-subtitle">La raza dorada con el mejor rendimiento en canal</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Francia</span>
+              <span class="spec-tag"><i class="fas fa-chart-line"></i> 65%+ Rend. canal</span>
+              <span class="spec-tag"><i class="fas fa-bone"></i> Hueso fino</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-trophy"></i> Eficiencia cárnica</span>
+              <a href="../Razas de carne/Limousin/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. NELORE (Carne) -->
+        <article class="breed-card" data-category="carne" data-origin="Brasil">
+          <div class="breed-img-wrap">
+            <img src="../Razas de carne/Nelore/Imagenes/toro-nelore.jpg" alt="Toro Nelore">
+            <span class="breed-badge-pos badge badge-carne">Carne</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Nelore</h2>
+            <p class="breed-subtitle">Líder del hato de carne de Brasil y climas cálidos</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> India / Brasil</span>
+              <span class="spec-tag"><i class="fas fa-shield-virus"></i> Antiparasitario</span>
+              <span class="spec-tag"><i class="fas fa-mountain"></i> Rusticidad pura</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-cow"></i> Hato extenso</span>
+              <a href="../Razas de carne/Nelore/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. AYRSHIRE (Leche) -->
+        <article class="breed-card" data-category="leche" data-origin="Escocia">
+          <div class="breed-img-wrap">
+            <img src="../Razas Lecheras/Ayrshire/Imagenes/Razza-Ayrshire.jpg" alt="Vaca Ayrshire">
+            <span class="breed-badge-pos badge badge-leche">Lechera</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Ayrshire</h2>
+            <p class="breed-subtitle">Eficiencia lechera, ubre simétrica y gran longevidad</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Escocia</span>
+              <span class="spec-tag"><i class="fas fa-tint"></i> 6.5k-9k L/lact.</span>
+              <span class="spec-tag"><i class="fas fa-hourglass-half"></i> Longeva</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-cheese"></i> Proteína alta</span>
+              <a href="../Razas Lecheras/Ayrshire/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. BROWN SWISS (Leche) -->
+        <article class="breed-card" data-category="leche" data-origin="Suiza">
+          <div class="breed-img-wrap">
+            <img src="../Razas Lecheras/Brown Swiss/Imagenes/vaca.jpg" alt="Vaca Brown Swiss">
+            <span class="breed-badge-pos badge badge-leche">Lechera</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Brown Swiss</h2>
+            <p class="breed-subtitle">La suiza marrón: solidez corporal y leche rica en sólidos</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Alpes Suizos</span>
+              <span class="spec-tag"><i class="fas fa-tint"></i> 7.5k-10.5k L</span>
+              <span class="spec-tag"><i class="fas fa-mountain"></i> Adaptable a altura</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-cheese"></i> Ideal para quesos</span>
+              <a href="../Razas Lecheras/Brown Swiss/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. GIROLANDO (Leche) -->
+        <article class="breed-card" data-category="leche" data-origin="Brasil">
+          <div class="breed-img-wrap">
+            <img src="../Razas Lecheras/Girolando/Imagenes/vaca.jpg" alt="Vaca Girolando Lechera">
+            <span class="breed-badge-pos badge badge-leche">Lechera</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Girolando (Lechero)</h2>
+            <p class="breed-subtitle">El milagro lechero del trópico: Holstein + Gyr</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Brasil</span>
+              <span class="spec-tag"><i class="fas fa-sun"></i> Clima cálido</span>
+              <span class="spec-tag"><i class="fas fa-tint"></i> Hasta 6.5k L</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-trophy"></i> Récord tropical</span>
+              <a href="../Razas Lecheras/Girolando/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. GUERNSEY (Leche) -->
+        <article class="breed-card" data-category="leche" data-origin="Islas del Canal">
+          <div class="breed-img-wrap">
+            <img src="../Razas Lecheras/Guernsey/Imagenes/guernsey.jpg" alt="Vaca Guernsey">
+            <span class="breed-badge-pos badge badge-leche">Lechera</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Guernsey</h2>
+            <p class="breed-subtitle">Productora de la codiciada Leche Dorada A2</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Islas del Canal</span>
+              <span class="spec-tag"><i class="fas fa-sun"></i> Betacaroteno</span>
+              <span class="spec-tag"><i class="fas fa-droplet"></i> Proteína A2</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-award"></i> Leche Premium</span>
+              <a href="../Razas Lecheras/Guernsey/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. HOLSTEIN-FRIESIAN (Leche) -->
+        <article class="breed-card" data-category="leche" data-origin="Holanda">
+          <div class="breed-img-wrap">
+            <img src="../Razas Lecheras/Holstein-Friesian/Imagenes/vaca-holstein.jfif" alt="Vaca Holstein">
+            <span class="breed-badge-pos badge badge-leche">Lechera</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Holstein-Friesian</h2>
+            <p class="breed-subtitle">La campeona absoluta del mundo en producción lechera</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Países Bajos</span>
+              <span class="spec-tag"><i class="fas fa-chart-line"></i> 10k-14k L/lact.</span>
+              <span class="spec-tag"><i class="fas fa-medal"></i> Líder mundial</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-fire"></i> Alto rendimiento</span>
+              <a href="../Razas Lecheras/Holstein-Friesian/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13. JERSEY (Leche) -->
+        <article class="breed-card" data-category="leche" data-origin="Reino Unido">
+          <div class="breed-img-wrap">
+            <img src="../Razas Lecheras/Jersey/Imagenes/vaca.jpg" alt="Vaca Jersey">
+            <span class="breed-badge-pos badge badge-leche">Lechera</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Jersey</h2>
+            <p class="breed-subtitle">La pequeña gigante de altísima concentración grasa</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Isla de Jersey</span>
+              <span class="spec-tag"><i class="fas fa-percent"></i> 4.8%-5.5% Grasa</span>
+              <span class="spec-tag"><i class="fas fa-leaf"></i> Menor huella de C</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-cheese"></i> Reina mantequillera</span>
+              <a href="../Razas Lecheras/Jersey/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14. GIROLANDO (Doble Propósito) -->
+        <article class="breed-card" data-category="doble" data-origin="Brasil">
+          <div class="breed-img-wrap">
+            <img src="../Doble Propósito (Carne + Leche)/Girolando/Imagenes/vaca.webp" alt="Vaca Girolando Doble Propósito">
+            <span class="breed-badge-pos badge badge-doble">Doble Propósito</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Girolando (Doble)</h2>
+            <p class="breed-subtitle">Leche abundante y machos con excelente ganancia cárnica</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Brasil</span>
+              <span class="spec-tag"><i class="fas fa-sun"></i> Clima tropical</span>
+              <span class="spec-tag"><i class="fas fa-scale-balanced"></i> 5/8 Holstein 3/8 Gyr</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-shield"></i> Resistencia tropical</span>
+              <a href="../Doble Propósito (Carne + Leche)/Girolando/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 15. GUZERÁ (Doble Propósito) -->
+        <article class="breed-card" data-category="doble" data-origin="India">
+          <div class="breed-img-wrap">
+            <img src="../Doble Propósito (Carne + Leche)/Guzera/Imagenes/toro.webp" alt="Toro Guzerá">
+            <span class="breed-badge-pos badge badge-doble">Doble Propósito</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Guzerá</h2>
+            <p class="breed-subtitle">El cebú indio original: cuernos en lira y gran rusticidad</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> India</span>
+              <span class="spec-tag"><i class="fas fa-water"></i> Tolerante a sequía</span>
+              <span class="spec-tag"><i class="fas fa-scale-balanced"></i> Doble propósito</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-cow"></i> Hato rústico</span>
+              <a href="../Doble Propósito (Carne + Leche)/Guzera/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 16. GYR (Doble Propósito) -->
+        <article class="breed-card" data-category="doble" data-origin="India">
+          <div class="breed-img-wrap">
+            <img src="../Doble Propósito (Carne + Leche)/Gyr/Imagenes/toro.jpg" alt="Toro Gyr">
+            <span class="breed-badge-pos badge badge-doble">Doble Propósito</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Gyr</h2>
+            <p class="breed-subtitle">El cebú lechero por excelencia y base del Girolando</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> India / Brasil</span>
+              <span class="spec-tag"><i class="fas fa-ear-listen"></i> Orejas largas</span>
+              <span class="spec-tag"><i class="fas fa-tint"></i> Leche tropical</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-dna"></i> Pilar genético</span>
+              <a href="../Doble Propósito (Carne + Leche)/Gyr/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 17. SANTA GERTRUDIS (Doble Propósito) -->
+        <article class="breed-card" data-category="doble" data-origin="Estados Unidos">
+          <div class="breed-img-wrap">
+            <img src="../Doble Propósito (Carne + Leche)/Santa Gertrudis/Imagenes/toro.jpg" alt="Toro Santa Gertrudis">
+            <span class="breed-badge-pos badge badge-doble">Doble Propósito</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Santa Gertrudis</h2>
+            <p class="breed-subtitle">La primera raza bovina creada en Norteamérica (King Ranch)</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Texas, EE.UU.</span>
+              <span class="spec-tag"><i class="fas fa-palette"></i> Rojo cereza</span>
+              <span class="spec-tag"><i class="fas fa-dna"></i> 3/8 Cebú 5/8 Shorthorn</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-shield-halved"></i> Muy resistente</span>
+              <a href="../Doble Propósito (Carne + Leche)/Santa Gertrudis/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 18. SIBONEY DE CUBA (Doble Propósito) -->
+        <article class="breed-card" data-category="doble" data-origin="Cuba">
+          <div class="breed-img-wrap">
+            <img src="../Doble Propósito (Carne + Leche)/Siboney de Cuba/Imagenes/vaca.jfif" alt="Vaca Siboney">
+            <span class="breed-badge-pos badge badge-doble">Doble Propósito</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Siboney de Cuba</h2>
+            <p class="breed-subtitle">5/8 Holstein + 3/8 Cebú adaptada al trópico caribeño</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> Cuba</span>
+              <span class="spec-tag"><i class="fas fa-sun"></i> Resiste humedad</span>
+              <span class="spec-tag"><i class="fas fa-leaf"></i> Pastoreo sin insumos</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-tint"></i> 3k-5k L leche</span>
+              <a href="../Doble Propósito (Carne + Leche)/Siboney de Cuba/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 19. SIMBRAH (Doble Propósito) -->
+        <article class="breed-card" data-category="doble" data-origin="Estados Unidos">
+          <div class="breed-img-wrap">
+            <img src="../Doble Propósito (Carne + Leche)/Simbrah/Imagenes/toro.jpg" alt="Toro Simbrah">
+            <span class="breed-badge-pos badge badge-doble">Doble Propósito</span>
+          </div>
+          <div class="breed-card-body">
+            <h2 class="breed-title">Simbrah</h2>
+            <p class="breed-subtitle">5/8 Simmental + 3/8 Brahman: potencia y rusticidad</p>
+            <div class="breed-specs-tags">
+              <span class="spec-tag"><i class="fas fa-earth-americas"></i> EE.UU.</span>
+              <span class="spec-tag"><i class="fas fa-dna"></i> Cruce selecto</span>
+              <span class="spec-tag"><i class="fas fa-weight-hanging"></i> Masa muscular</span>
+            </div>
+            <div class="breed-card-footer">
+              <span class="spec-tag"><i class="fas fa-fire"></i> Crecimiento rápido</span>
+              <a href="../Doble Propósito (Carne + Leche)/Simbrah/index.html" class="btn-card-link">
+                Ver Ficha <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ESTADO VACÍO (NO RESULTS) -->
+        <div id="noResults" class="no-results" style="display: none;">
+          <i class="fas fa-search-minus"></i>
+          <h3>No encontramos razas con ese criterio</h3>
+          <p>Intenta con otro término de búsqueda o selecciona otra categoría.</p>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>Ganadería <span>Élite</span></h3>
+            <p>Catálogo zootécnico certificado. Información genética, morfológica y productiva para ganaderos profesionales y criadores de alto rendimiento.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="../index.html">Página de Inicio</a></li>
+              <li><a href="../Productos/index.html">Tienda de Lácteos</a></li>
+              <li><a href="../carrito/index.html">Carrito de Compras</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Contacto Ganadero</h4>
+            <ul>
+              <li><a href="../Productos/index.html">Ventas y Asesoría Genética</a></li>
+              <li><a href="../index.html">Certificados Sanitarios</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 <span>Ganadería Élite</span>. Catálogo Zootécnico de Razas Bovinas.</p>
+          <p>Navega por cada raza y conoce sus fortalezas productivas.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="../js/app.js"></script>
+  <script src="../js/catalogo.js"></script>
+</body>
+</html>
